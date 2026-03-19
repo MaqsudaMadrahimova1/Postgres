@@ -6,8 +6,11 @@ create table if not exists talabalar(
     birth_date date not null,
     gender varchar(10) not null,
     grade int not null,
+    shahar varchar(50) not null,
     address text not null
 );
+select * from talabalar
+LIMIT 10 OFFSET 5;
 
 
 SELECT * FROM talabalar ORDER BY grade DESC;
