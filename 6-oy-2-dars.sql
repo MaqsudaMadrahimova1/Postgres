@@ -43,3 +43,25 @@ create table if not exists kurslar(
     davomiyligi int not null,
     narxi int not null
 );
+
+
+
+-- 2-topshiriq
+
+
+
+select*from  talabalar 
+order by grade ASC
+limit 10;
+
+
+
+select kurs_nomi, avg(baho) AS ortacha_baho 
+from talabalar 
+group by kurs_nomi 
+having avg(baho) > 85;
+
+select ism, shahar, 'talaba' AS shaxs_turi from talabalar
+union
+select ism, shahar, 'oqituvchi' AS shaxs_turi from oqituvchilar;
+
